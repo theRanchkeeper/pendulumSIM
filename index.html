@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics-Simulation-v0.1</title>
+    <script src="./lib/p5.min.js"></script>
+    <script src="./src/main.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Simple Pendulum</h1>
+    length of the string (cm):<input id="stringLen" type="range" min="5" max="13" value='10'><p id="lengthVal"></p><br>
+    set initial angle:<input id="startAngle" type="range" min="-48" max="48" value="45"><p id="angleVal"></p>
+    <button id="initAngle" onclick="set_angle()">set</button>
+    <button id="resetAngle" onclick="reset_angle()">reset</button>
+
+    <div class="stopwatch">
+        <p id="minutes">00</p>:<p id="seconds">00</p>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+        <button id="save">Reset</button>
+    </div>   
+    <script src="./src/stopwatch.js"></script>
+
+</body>
+</html>
