@@ -7,20 +7,37 @@
     <title>Physics-Simulation-v0.1</title>
     <script src="./lib/p5.min.js"></script>
     <script src="./src/main.js"></script>
+    
 </head>
 <body>
     <h1 style="text-align: center;">Simple Pendulum</h1>
-    length of the string (cm):<input id="stringLen" type="range" min="5" max="13" value='10'><p id="lengthVal"></p><br>
-    set initial angle:<input id="startAngle" type="range" min="-48" max="48" value="45"><p id="angleVal"></p>
+    length of the string (cm):<input id="stringLen" type="range" min="5" max="13" value='10'>Value:<span id="lengthVal"></span><br>
+    set initial angle:<input id="startAngle" type="range" min="-48" max="48" value="45">Value:<span id="angleVal"></span>
+    <br>
     <button id="initAngle" onclick="set_angle()">set</button>
     <button id="resetAngle" onclick="reset_angle()">reset</button>
 
-    <div class="stopwatch">
-        <p id="minutes">00</p>:<p id="seconds">00</p>
+    <div id="oscillations">
+        Time taken for 20 oscillations:
+        <input id="time" type='text' placeholder="Enter in seconds"><br>
+        <button id="submit">Enter</button>
+        <!-- <button id="form_reset">reset</button> -->
+       <br>
+        <div id="output">
+            Time period =<span id="T"></span><br>
+            T<sup>2</sup> = <span id="T2"></span><br>
+            result = <span id="result"></span>
+        </div>
+        <script src="./src/calculate.js"></script>
+    </div>
+    <br>
+    <div class="stopwatch" style="display :flexbox">
+        <span id="minutes">00</span>:<span id="seconds">00</span>
+        <br>
         <button id="start">Start</button>
         <button id="stop">Stop</button>
         <button id="reset">Reset</button>
-        <button id="save">Reset</button>
+        <!-- <button id="save">Reset</button> -->
     </div>   
     <script src="./src/stopwatch.js"></script>
 

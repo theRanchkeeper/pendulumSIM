@@ -10,6 +10,7 @@ var stop_btn = document.getElementById('stop');
 var reset_btn = document.getElementById('reset');
 
 var timeout;//aliasis for setInterval
+form
 
 function start(){
     sec++;
@@ -44,7 +45,9 @@ start_btn.addEventListener('click' , () =>{
 //stopwatch stops
 stop_btn.addEventListener('click' , ()=>{
 
+    
     if(toggle == true){
+        form.disabled = false;
         toggle = false;
         clearInterval(timeout);
     }
